@@ -1,0 +1,35 @@
+# This file describes a Fastly Compute package. To learn more visit:
+# https://developer.fastly.com/reference/fastly-toml/
+
+authors = [""]
+description = "Datadome template to use Fastly Compute-at-Edge module"
+language = "javascript"
+manifest_version = 3
+name = "DataDome-Fastly_Compute-at-Edge-template"
+service_id = ""
+
+[scripts]
+  build = "npm run build"
+  post_init = "npm install"
+
+[setup]
+
+  [setup.backends]
+
+    [setup.backends.datadome]
+      address = "api-fastly.datadome.co"
+      description = "Datadom protection API"
+      port = 443
+
+    [setup.backends.origin]
+      description = "Origin backend"
+      port = 443
+
+  [setup.config_stores]
+    [setup.config_stores.datadome]
+      description = "Configuration data for my service"
+      [setup.config_stores.datadome.items]
+        [setup.config_stores.datadome.items.datadome_server_side_key]
+          description="Server side key from DataDome dashboard"
+        [setup.config_stores.datadome.items.datadome_client_side_key]
+          description="Client side key from DataDome dashboard"
