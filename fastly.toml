@@ -2,10 +2,10 @@
 # https://developer.fastly.com/reference/fastly-toml/
 
 authors = [""]
-description = "Datadome template to use Fastly Compute-at-Edge module"
+description = "Datadome template to use Fastly Compute module"
 language = "javascript"
 manifest_version = 3
-name = "DataDome-Fastly_Compute-at-Edge-template"
+name = "DataDome-Fastly_Compute-template"
 service_id = ""
 
 [scripts]

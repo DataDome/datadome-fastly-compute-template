@@ -1,11 +1,11 @@
 {
-  "description": "DataDome Fastly Compute@Edge template",
+  "description": "DataDome Fastly Compute template",
   "engines": {
     "node": "^18.0.0 || ^20"
   },
   "dependencies": {
     "@fastly/js-compute": "^3.10.0",
-    "@datadome/fastly-compute-at-edge": "1.0.0"
+    "@datadome/module-fastly-compute": "1.0.0"
   },
   "devDependencies": {
     "webpack": "^5.89.0",
